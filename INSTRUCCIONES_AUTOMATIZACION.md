@@ -6,7 +6,7 @@ Se ha creado exitosamente una página web futurista para noticias de tecnología
 
 - **Diseño:** Estilo futurista/art deco/minimalista inspirado en Blade Runner
 - **Tecnologías:** HTML, CSS y JavaScript puro
-- **Dominio:** bladerunner.es (configurado en GitHub Pages)
+- **Dominio:** www.bladerunner.com.es (configurado en GitHub Pages)
 - **Repositorio:** https://github.com/felixquintana/fq.github.io
 - **Rama:** gh-pages
 
@@ -109,7 +109,7 @@ Horario: Diariamente a las 8:00 AM (zona horaria de España)
 
 ### Configuración del Dominio
 
-El dominio `bladerunner.es` debe estar configurado con los siguientes registros DNS:
+El dominio `www.bladerunner.com.es` debe estar configurado con los siguientes registros DNS:
 
 ```
 Tipo: CNAME
