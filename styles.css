@@ -1,0 +1,406 @@
+/* Reset y variables CSS */
+:root {
+    --primary-color: #00ffff;
+    --secondary-color: #ff6b35;
+    --accent-color: #ffd700;
+    --bg-dark: #0a0a0a;
+    --bg-darker: #050505;
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0b0;
+    --text-muted: #666666;
+    --border-color: #333333;
+    --gradient-primary: linear-gradient(135deg, #00ffff 0%, #0080ff 100%);
+    --gradient-secondary: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+    --shadow-glow: 0 0 20px rgba(0, 255, 255, 0.3);
+    --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Exo 2', sans-serif;
+    background: var(--bg-dark);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Fondo animado */
+.background-grid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: -2;
+    animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(50px, 50px); }
+}
+
+.background-particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.background-particles::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 2px;
+    height: 2px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    box-shadow: 
+        100px 200px 0 var(--primary-color),
+        300px 100px 0 var(--secondary-color),
+        500px 300px 0 var(--accent-color),
+        700px 150px 0 var(--primary-color),
+        900px 250px 0 var(--secondary-color);
+    animation: particleFloat 15s ease-in-out infinite;
+}
+
+@keyframes particleFloat {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Container principal */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Header */
+.header {
+    padding: 40px 0;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.header-content {
+    margin-bottom: 20px;
+}
+
+.logo {
+    font-family: 'Orbitron', monospace;
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+}
+
+.logo-blade {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: var(--shadow-glow);
+}
+
+.logo-runner {
+    background: var(--gradient-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-left: 10px;
+}
+
+.logo-subtitle {
+    display: block;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    margin-top: 10px;
+    letter-spacing: 8px;
+}
+
+.header-line {
+    width: 200px;
+    height: 2px;
+    background: var(--gradient-primary);
+    margin: 20px auto;
+    border-radius: 1px;
+    box-shadow: var(--shadow-glow);
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.last-update {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-family: 'Orbitron', monospace;
+}
+
+/* Grid de noticias */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+/* Tarjetas de noticias */
+.news-card {
+    background: linear-gradient(145deg, rgba(20, 20, 20, 0.9), rgba(10, 10, 10, 0.9));
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 30px;
+    position: relative;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+}
+
+.news-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gradient-primary);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.news-card:hover::before {
+    transform: scaleX(1);
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-card);
+    border-color: var(--primary-color);
+}
+
+.news-card:nth-child(even):hover {
+    border-color: var(--secondary-color);
+}
+
+.news-card:nth-child(even)::before {
+    background: var(--gradient-secondary);
+}
+
+.news-title {
+    font-family: 'Orbitron', monospace;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 15px;
+    line-height: 1.4;
+    text-decoration: none;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.news-title:hover {
+    color: var(--primary-color);
+}
+
+.news-card:nth-child(even) .news-title:hover {
+    color: var(--secondary-color);
+}
+
+.news-summary {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.news-link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.news-card:nth-child(even) .news-link {
+    color: var(--secondary-color);
+}
+
+.news-link::after {
+    content: '→';
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.news-link:hover::after {
+    transform: translateX(5px);
+}
+
+.news-link:hover {
+    text-shadow: 0 0 10px currentColor;
+}
+
+/* Footer */
+.footer {
+    border-top: 1px solid var(--border-color);
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-content p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-link:hover {
+    color: var(--primary-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .logo {
+        font-size: 2.5rem;
+    }
+    
+    .logo-subtitle {
+        font-size: 0.8rem;
+        letter-spacing: 4px;
+    }
+    
+    .news-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .news-card {
+        padding: 20px;
+    }
+    
+    .news-title {
+        font-size: 1.1rem;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .last-update {
+        position: static;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 2rem;
+    }
+    
+    .tagline {
+        font-size: 1rem;
+    }
+    
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* Animaciones de carga */
+.news-card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.news-card:nth-child(1) { animation-delay: 0.1s; }
+.news-card:nth-child(2) { animation-delay: 0.2s; }
+.news-card:nth-child(3) { animation-delay: 0.3s; }
+.news-card:nth-child(4) { animation-delay: 0.4s; }
+.news-card:nth-child(5) { animation-delay: 0.5s; }
+.news-card:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Efectos de scroll */
+.header {
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: fadeInDown 0.8s ease forwards;
+}
+
+@keyframes fadeInDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+

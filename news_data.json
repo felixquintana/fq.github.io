@@ -1,0 +1,41 @@
+{
+  "last_updated": "2025-08-08T12:01:54.233665",
+  "news_count": 5,
+  "news": [
+    {
+      "title": "La agencia para regular la IA en EE UU pierde fuelle tras los recortes de Trump",
+      "summary": "Nuevos desarrollos en inteligencia artificial que están transformando la industria tecnológica.",
+      "link": "https://technologyreview.es/article/la-agencia-para-regular-la-ia-en-ee-uu-pierde-fuelle-tras-los-recortes-de-trump/",
+      "source": "MIT Technology Review",
+      "timestamp": "2025-08-08T12:01:51.624225"
+    },
+    {
+      "title": "Por qué no es una buena idea delegar todo en agentes de IA",
+      "summary": "Nuevos desarrollos en inteligencia artificial que están transformando la industria tecnológica.",
+      "link": "https://technologyreview.es/article/por-que-no-es-una-buena-idea-delegar-todo-en-agentes-de-ia/",
+      "source": "MIT Technology Review",
+      "timestamp": "2025-08-08T12:01:51.624194"
+    },
+    {
+      "title": "Los modelos de lenguaje locales llegan a los portátiles para hacer accesible la IA",
+      "summary": "Nuevos desarrollos en inteligencia artificial que están transformando la industria tecnológica.",
+      "link": "https://technologyreview.es/article/los-modelos-de-lenguaje-locales-llegan-a-los-portatiles-para-hacer-accesible-la-ia/",
+      "source": "MIT Technology Review",
+      "timestamp": "2025-08-08T12:01:51.624172"
+    },
+    {
+      "title": "La ideología de la salvación tecnológica o cómo los multimillonarios juegan con el futuro de la humanidad",
+      "summary": "Desarrollo tecnológico relevante que impacta en la industria y los usuarios.",
+      "link": "https://technologyreview.es/article/la-ideologia-de-la-salvacion-tecnologica-o-como-los-multimillonarios-juegan-con-el-futuro-de-la-humanidad/",
+      "source": "MIT Technology Review",
+      "timestamp": "2025-08-08T12:01:51.624144"
+    },
+    {
+      "title": "OpenAI lanza GPT-5 y se acerca a la IA agéntica",
+      "summary": "Nuevos desarrollos en inteligencia artificial que están transformando la industria tecnológica.",
+      "link": "https://technologyreview.es/article/openai-lanza-gpt-5-y-se-acerca-a-la-ia-agentica/",
+      "source": "MIT Technology Review",
+      "timestamp": "2025-08-08T12:01:51.624071"
+    }
+  ]
+}
