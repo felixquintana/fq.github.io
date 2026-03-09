@@ -1,4 +1,4 @@
-// Datos de noticias (actualizado automÃ¡ticamente - 9 Marzo 2026)
+// Datos de noticias (actualizado automaticamente - 9 Marzo 2026)
 const newsData = [
     {
         title: "Railway recauda 100 millones para desafiar a AWS con infraestructura cloud nativa para IA",
@@ -8,37 +8,37 @@ const newsData = [
     },
     {
         title: "City Union Bank crea centro de excelencia en IA para operaciones bancarias",
-        summary: "El banco indio City Union Bank anuncia un acuerdo de cuatro partes para desarrollar sistemas de IA enfocados en detecciÃ³n de fraude, anÃ¡lisis de riesgo crediticio y cumplimiento regulatorio.",
+        summary: "El banco indio City Union Bank anuncia un acuerdo de cuatro partes para desarrollar sistemas de IA enfocados en deteccion de fraude, analisis de riesgo crediticio y cumplimiento regulatorio.",
         link: "https://www.artificialintelligence-news.com/news/city-union-bank-launches-ai-centre-to-support-banking-operations/",
         source: "Artificial Intelligence News"
     },
     {
-        title: "DOGE usÃ³ ChatGPT para decidir quÃ© subvenciones cancelar en Humanidades",
-        summary: "La agencia DOGE utilizÃ³ prompts de ChatGPT para decidir quÃ© subvenciones del National Endowment for the Humanities cancelar, sin anÃ¡lisis detallado de los proyectos.",
+        title: "DOGE uso ChatGPT para decidir que subvenciones cancelar en Humanidades",
+        summary: "La agencia DOGE utilizo prompts de ChatGPT para decidir que subvenciones del National Endowment for the Humanities cancelar, sin analisis detallado de los proyectos.",
         link: "https://www.theverge.com/2026/03/07/doge-chatgpt-grants-cancellation",
         source: "The Verge"
     },
     {
-        title: "Responsable de robÃ³tica de OpenAI dimite por el acuerdo con el PentÃ¡gono",
-        summary: "Caitlin Kalinowski deja OpenAI protestando por el contrato de la empresa con el PentÃ¡gono y la falta de protecciones contra vigilancia sin orden judicial.",
+        title: "Responsable de robotica de OpenAI dimite por el acuerdo con el Pentagono",
+        summary: "Caitlin Kalinowski deja OpenAI protestando por el contrato de la empresa con el Pentagono y la falta de protecciones contra vigilancia sin orden judicial.",
         link: "https://www.theverge.com/ai-artificial-intelligence/886816/openai-reached-a-new-agreement-with-the-pentagon",
         source: "The Verge"
     },
     {
-        title: "CISA ordena parchear 3 vulnerabilidades crÃ­ticas de iOS explotadas durante 10 meses",
+        title: "CISA ordena parchear 3 vulnerabilidades criticas de iOS explotadas durante 10 meses",
         summary: "El gobierno de EE.UU. ordena a agencias federales arreglar fallos de iOS que fueron explotados por grupos de hacking que usaban un kit avanzado de 23 exploits.",
         link: "https://arstechnica.com/security/2026/03/cisa-adds-3-ios-flaws-to-its-catalog-of-known-exploited-vulnerabilities/",
         source: "Ars Technica"
     },
     {
-        title: "CaÃ­da masiva de Amazon: mÃ¡s de 20.000 reportes de problemas",
-        summary: "Amazon experimenta una caÃ­da generalizada afectando su web, Prime Video y AWS, con mÃ¡s de 20.000 reportes en Downdetector.",
+        title: "Caida masiva de Amazon: mas de 20.000 reportes de problemas",
+        summary: "Amazon experimenta una caida generalizada afectando su web, Prime Video y AWS, con mas de 20.000 reportes en Downdetector.",
         link: "https://arstechnica.com/gadgets/2026/03/amazon-appears-to-be-down-with-over-20000-reported-problems/",
         source: "Ars Technica"
     },
 ];
 
-// FunciÃ³n para formatear la fecha
+// Funcion para formatear la fecha
 function formatDate(date) {
     const options = {
         year: 'numeric',
@@ -51,7 +51,7 @@ function formatDate(date) {
     return date.toLocaleDateString('es-ES', options);
 }
 
-// FunciÃ³n para crear una tarjeta de noticia
+// Funcion para crear una tarjeta de noticia
 function createNewsCard(news, index) {
     const card = document.createElement('article');
     card.className = 'news-card';
@@ -63,14 +63,14 @@ function createNewsCard(news, index) {
         </a>
         <p class="news-summary">${news.summary}</p>
         <a href="${news.link}" target="_blank" rel="noopener noreferrer" class="news-link">
-            Leer mÃ¡s
+            Leer mas
         </a>
     `;
     
     return card;
 }
 
-// FunciÃ³n para cargar las noticias
+// Funcion para cargar las noticias
 function loadNews() {
     const container = document.getElementById('news-container');
     container.innerHTML = '';
@@ -81,20 +81,20 @@ function loadNews() {
     });
 }
 
-// FunciÃ³n para actualizar la hora de Ãºltima actualizaciÃ³n
+// Funcion para actualizar la hora de ultima actualizacion
 function updateLastUpdateTime() {
     const updateTimeElement = document.getElementById('update-time');
     const now = new Date();
     updateTimeElement.textContent = formatDate(now);
 }
 
-// FunciÃ³n para simular la carga de nuevas noticias (para futuras actualizaciones automÃ¡ticas)
+// Funcion para simular la carga de nuevas noticias
 async function fetchLatestNews() {
     console.log('Buscando nuevas noticias...');
     return newsData;
 }
 
-// FunciÃ³n para refrescar las noticias
+// Funcion para refrescar las noticias
 async function refreshNews() {
     try {
         const latestNews = await fetchLatestNews();
@@ -135,7 +135,7 @@ function initializeVisualEffects() {
     });
 }
 
-// FunciÃ³n para manejar la responsividad
+// Funcion para manejar la responsividad
 function handleResponsive() {
     const updateResponsiveLayout = () => {
         const container = document.querySelector('.news-grid');
@@ -154,7 +154,7 @@ function handleResponsive() {
     updateResponsiveLayout();
 }
 
-// FunciÃ³n de inicializaciÃ³n
+// Funcion de inicializacion
 function init() {
     console.log('Inicializando BladeRunner Tech News...');
     loadNews();
