@@ -1,33 +1,44 @@
-// Datos de noticias (se actualizarán dinámicamente)
+// Datos de noticias (actualizado automÃ¡ticamente)
 const newsData = [
     {
-        title: "La agencia para regular la IA en EE UU pierde fuelle tras los recortes de Trump",
-        summary: "Nuevos desarrollos en inteligencia artificial que están transformando la industria tecnológica.",
-        link: "https://technologyreview.es/article/la-agencia-para-regular-la-ia-en-ee-uu-pierde-fuelle-tras-los-recortes-de-trump/"
+        title: "Railway recauda 100 millones para desafiar a AWS con infraestructura cloud nativa para IA",
+        summary: "Railway, la plataforma cloud con 2 millones de desarrolladores, levanta 100M$ en Serie B para ofrecer despliegues en menos de 1 segundo adaptados a la era de agentes IA.",
+        link: "https://venturebeat.com/infrastructure/railway-secures-usd100-million-to-challenge-aws-with-ai-native-cloud",
+        source: "VentureBeat"
     },
     {
-        title: "Por qué no es una buena idea delegar todo en agentes de IA",
-        summary: "Nuevos desarrollos en inteligencia artificial que están transformando la industria tecnológica.",
-        link: "https://technologyreview.es/article/por-que-no-es-una-buena-idea-delegar-todo-en-agentes-de-ia/"
+        title: "City Union Bank crea centro de excelencia en IA para operaciones bancarias",
+        summary: "El banco indio City Union Bank anuncia un acuerdo de cuatro partes para desarrollar sistemas de IA enfocados en detecciÃ³n de fraude, anÃ¡lisis de riesgo crediticio y cumplimiento regulatorio.",
+        link: "https://www.artificialintelligence-news.com/news/city-union-bank-launches-ai-centre-to-support-banking-operations/",
+        source: "Artificial Intelligence News"
     },
     {
-        title: "Los modelos de lenguaje locales llegan a los portátiles para hacer accesible la IA",
-        summary: "Nuevos desarrollos en inteligencia artificial que están transformando la industria tecnológica.",
-        link: "https://technologyreview.es/article/los-modelos-de-lenguaje-locales-llegan-a-los-portatiles-para-hacer-accesible-la-ia/"
+        title: "DOGE usÃ³ ChatGPT para decidir quÃ© subvenciones cancelar en Humanidades",
+        summary: "La agencia DOGE utilizÃ³ prompts de ChatGPT para decidir quÃ© subvenciones del National Endowment for the Humanities cancelar, sin anÃ¡lisis detallado de los proyectos.",
+        link: "https://www.theverge.com/2026/03/07/doge-chatgpt-grants-cancellation",
+        source: "The Verge"
     },
     {
-        title: "La ideología de la salvación tecnológica o cómo los multimillonarios juegan con el futuro de la humanidad",
-        summary: "Desarrollo tecnológico relevante que impacta en la industria y los usuarios.",
-        link: "https://technologyreview.es/article/la-ideologia-de-la-salvacion-tecnologica-o-como-los-multimillonarios-juegan-con-el-futuro-de-la-humanidad/"
+        title: "Responsable de robÃ³tica de OpenAI dimite por el acuerdo con el PentÃ¡gono",
+        summary: "Caitlin Kalinowski deja OpenAI protestando por el contrato de la empresa con el PentÃ¡gono y la falta de protecciones contra vigilancia sin orden judicial.",
+        link: "https://www.theverge.com/ai-artificial-intelligence/886816/openai-reached-a-new-agreement-with-the-pentagon",
+        source: "The Verge"
     },
     {
-        title: "OpenAI lanza GPT-5 y se acerca a la IA agéntica",
-        summary: "Nuevos desarrollos en inteligencia artificial que están transformando la industria tecnológica.",
-        link: "https://technologyreview.es/article/openai-lanza-gpt-5-y-se-acerca-a-la-ia-agentica/"
+        title: "CISA ordena parchear 3 vulnerabilidades crÃ­ticas de iOS explotadas durante 10 meses",
+        summary: "El gobierno de EE.UU. ordena a agencias federales arreglar fallos de iOS que fueron explotados por grupos de hacking que usaban un kit avanzado de 23 exploits.",
+        link: "https://arstechnica.com/security/2026/03/cisa-adds-3-ios-flaws-to-its-catalog-of-known-exploited-vulnerabilities/",
+        source: "Ars Technica"
+    },
+    {
+        title: "CaÃ­da masiva de Amazon: mÃ¡s de 20.000 reportes de problemas",
+        summary: "Amazon experimenta una caÃ­da generalizada afectando su web, Prime Video y AWS, con mÃ¡s de 20.000 reportes en Downdetector.",
+        link: "https://arstechnica.com/gadgets/2026/03/amazon-appears-to-be-down-with-over-20000-reported-problems/",
+        source: "Ars Technica"
     },
 ];
 
-// Función para formatear la fecha
+// FunciÃ³n para formatear la fecha
 function formatDate(date) {
     const options = {
         year: 'numeric',
@@ -40,7 +51,7 @@ function formatDate(date) {
     return date.toLocaleDateString('es-ES', options);
 }
 
-// Función para crear una tarjeta de noticia
+// FunciÃ³n para crear una tarjeta de noticia
 function createNewsCard(news, index) {
     const card = document.createElement('article');
     card.className = 'news-card';
@@ -52,14 +63,14 @@ function createNewsCard(news, index) {
         </a>
         <p class="news-summary">${news.summary}</p>
         <a href="${news.link}" target="_blank" rel="noopener noreferrer" class="news-link">
-            Leer más
+            Leer mÃ¡s
         </a>
     `;
     
     return card;
 }
 
-// Función para cargar las noticias
+// FunciÃ³n para cargar las noticias
 function loadNews() {
     const container = document.getElementById('news-container');
     container.innerHTML = '';
@@ -70,26 +81,26 @@ function loadNews() {
     });
 }
 
-// Función para actualizar la hora de última actualización
+// FunciÃ³n para actualizar la hora de Ãºltima actualizaciÃ³n
 function updateLastUpdateTime() {
     const updateTimeElement = document.getElementById('update-time');
     const now = new Date();
     updateTimeElement.textContent = formatDate(now);
 }
 
-// Función para simular la carga de nuevas noticias (para futuras actualizaciones automáticas)
+// FunciÃ³n para simular la carga de nuevas noticias (para futuras actualizaciones automÃ¡ticas)
 async function fetchLatestNews() {
-    // Esta función se conectará con el sistema de actualización automática
-    // Por ahora, simula una actualización
+    // Esta funciÃ³n se conectarÃ¡ con el sistema de actualizaciÃ³n automÃ¡tica
+    // Por ahora, simula una actualizaciÃ³n
     console.log('Buscando nuevas noticias...');
     
-    // Aquí se implementará la lógica para obtener noticias actualizadas
-    // desde el sistema de automatización
+    // AquÃ­ se implementarÃ¡ la lÃ³gica para obtener noticias actualizadas
+    // desde el sistema de automatizaciÃ³n
     
-    return newsData; // Por ahora retorna los datos estáticos
+    return newsData; // Por ahora retorna los datos estÃ¡ticos
 }
 
-// Función para refrescar las noticias
+// FunciÃ³n para refrescar las noticias
 async function refreshNews() {
     try {
         const latestNews = await fetchLatestNews();
@@ -136,7 +147,7 @@ function initializeVisualEffects() {
     });
 }
 
-// Función para manejar la responsividad
+// FunciÃ³n para manejar la responsividad
 function handleResponsive() {
     const updateResponsiveLayout = () => {
         const container = document.querySelector('.news-grid');
@@ -155,14 +166,14 @@ function handleResponsive() {
     updateResponsiveLayout();
 }
 
-// Función de inicialización
+// FunciÃ³n de inicializaciÃ³n
 function init() {
     console.log('Inicializando BladeRunner Tech News...');
     
     // Cargar noticias iniciales
     loadNews();
     
-    // Actualizar hora de última actualización
+    // Actualizar hora de Ãºltima actualizaciÃ³n
     updateLastUpdateTime();
     
     // Inicializar efectos visuales
@@ -171,8 +182,8 @@ function init() {
     // Manejar responsividad
     handleResponsive();
     
-    // Configurar actualización automática cada hora (para pruebas)
-    // En producción, esto se manejará desde el servidor
+    // Configurar actualizaciÃ³n automÃ¡tica cada hora (para pruebas)
+    // En producciÃ³n, esto se manejarÃ¡ desde el servidor
     setInterval(() => {
         console.log('Verificando actualizaciones...');
         // refreshNews(); // Descomentado para evitar actualizaciones constantes en desarrollo
@@ -181,13 +192,12 @@ function init() {
     console.log('BladeRunner Tech News inicializado correctamente');
 }
 
-// Inicializar cuando el DOM esté listo
+// Inicializar cuando el DOM estÃ© listo
 document.addEventListener('DOMContentLoaded', init);
 
-// Función para exportar datos (útil para el sistema de actualización)
+// FunciÃ³n para exportar datos (Ãºtil para el sistema de actualizaciÃ³n)
 window.BladeRunnerNews = {
     refreshNews,
     updateLastUpdateTime,
     newsData
 };
-
