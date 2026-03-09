@@ -1,7 +1,7 @@
 // Datos de noticias (actualizado automaticamente - 09 March 2026)
 const newsData = [
     {
-        title: "1 - OpenAI presenta GPT-5 con capacidades agÃ©nticas avanzadas",
+        title: "2 - OpenAI presenta GPT-5 con capacidades agÃ©nticas avanzadas",
         summary: "El nuevo modelo de OpenAI promete revolutionize la automatizacion de tareas complejas.",
         link: "https://openai.com",
         source: "OpenAI"
