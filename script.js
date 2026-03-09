@@ -1,40 +1,64 @@
 // Datos de noticias (actualizado automaticamente - 09 March 2026)
 const newsData = [
     {
-        title: "2 - OpenAI presenta GPT-5 con capacidades agÃ©nticas avanzadas",
-        summary: "El nuevo modelo de OpenAI promete revolutionize la automatizacion de tareas complejas.",
-        link: "https://openai.com",
-        source: "OpenAI"
+        title: "System.Xml.XmlElement",
+        summary: "System.Xml.XmlElement",
+        link: "https://www.theverge.com/gadgets/891339/google-pixel-watch-3-4-sony-wh-1000xm5-headphones-deal-sale",
+        source: "The Verge"
     },
     {
-        title: "Google Gemini supera benchmarks de razonamiento",
-        summary: "El ultimo modelo de Google muestra mejoras significativas en tareas de razonamiento.",
-        link: "https://blog.google",
-        source: "Google"
+        title: "System.Xml.XmlElement",
+        summary: "System.Xml.XmlElement",
+        link: "https://www.theverge.com/ai-artificial-intelligence/891377/anthropic-dod-lawsuit",
+        source: "The Verge"
     },
     {
-        title: "Microsoft integra IA en Windows 12",
-        summary: "Windows 12 llegara con Copilot integrado a nivel de sistema operativo.",
-        link: "https://microsoft.com",
-        source: "Microsoft"
+        title: "System.Xml.XmlElement",
+        summary: "System.Xml.XmlElement",
+        link: "https://www.theverge.com/entertainment/891378/battlefield-6-layoffs-ea",
+        source: "The Verge"
     },
     {
-        title: "Apple lanza IA local para iPhone",
-        summary: "Apple Intelligence permitira ejecutar modelos LLM directamente en el dispositivo.",
-        link: "https://apple.com",
-        source: "Apple"
+        title: "System.Xml.XmlElement",
+        summary: "System.Xml.XmlElement",
+        link: "https://www.theverge.com/policy/891379/live-nation-antitrust-settlement-ticketmaster",
+        source: "The Verge"
     },
     {
-        title: "Meta releases Llama 4 de codigo abierto",
-        summary: "El nuevo modelo de Meta rivaliza con los mejores modelos propietarios.",
-        link: "https://meta.com",
-        source: "Meta"
+        title: "System.Xml.XmlElement",
+        summary: "System.Xml.XmlElement",
+        link: "https://www.theverge.com/transportation/891310/donut-lab-solid-state-battery-supercapacitor-test-result",
+        source: "The Verge"
     },
     {
-        title: "NVIDIA presenta chips IA 10x mas rapidos",
-        summary: "La nueva arquitectura Blackwell promete saltos cuanticos en capacidad de calculo IA.",
-        link: "https://nvidia.com",
-        source: "NVIDIA"
+        title: "System.Xml.XmlElement",
+        summary: "System.Xml.XmlElement",
+        link: "https://www.theverge.com/tech/891299/yashica-tank-digital-point-shoot-camera-retro",
+        source: "The Verge"
+    },
+    {
+        title: "System.Xml.XmlElement",
+        summary: "System.Xml.XmlElement",
+        link: "https://www.theverge.com/tech/891352/x-grok-xai-edit-blocker-photo-toggle",
+        source: "The Verge"
+    },
+    {
+        title: "System.Xml.XmlElement",
+        summary: "System.Xml.XmlElement",
+        link: "https://www.theverge.com/gadgets/891304/switch-2-microsd-express-card-samsung-mario-day-deal-sale",
+        source: "The Verge"
+    },
+    {
+        title: "System.Xml.XmlElement",
+        summary: "System.Xml.XmlElement",
+        link: "https://www.theverge.com/podcast/890703/hasbro-toys-games-magic-exodus-ai-tariffs",
+        source: "The Verge"
+    },
+    {
+        title: "System.Xml.XmlElement",
+        summary: "System.Xml.XmlElement",
+        link: "https://www.theverge.com/games/890010/panic-gaming-big-walk-portland-house-house",
+        source: "The Verge"
     },
 ];
 function formatDate(date) {
