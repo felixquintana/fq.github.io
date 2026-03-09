@@ -1,4 +1,4 @@
-// Datos de noticias (actualizado automÃ¡ticamente)
+// Datos de noticias (actualizado automÃ¡ticamente - 9 Marzo 2026)
 const newsData = [
     {
         title: "Railway recauda 100 millones para desafiar a AWS con infraestructura cloud nativa para IA",
@@ -90,28 +90,18 @@ function updateLastUpdateTime() {
 
 // FunciÃ³n para simular la carga de nuevas noticias (para futuras actualizaciones automÃ¡ticas)
 async function fetchLatestNews() {
-    // Esta funciÃ³n se conectarÃ¡ con el sistema de actualizaciÃ³n automÃ¡tica
-    // Por ahora, simula una actualizaciÃ³n
     console.log('Buscando nuevas noticias...');
-    
-    // AquÃ­ se implementarÃ¡ la lÃ³gica para obtener noticias actualizadas
-    // desde el sistema de automatizaciÃ³n
-    
-    return newsData; // Por ahora retorna los datos estÃ¡ticos
+    return newsData;
 }
 
 // FunciÃ³n para refrescar las noticias
 async function refreshNews() {
     try {
         const latestNews = await fetchLatestNews();
-        // Actualizar los datos globales
         newsData.length = 0;
         newsData.push(...latestNews);
-        
-        // Recargar la interfaz
         loadNews();
         updateLastUpdateTime();
-        
         console.log('Noticias actualizadas correctamente');
     } catch (error) {
         console.error('Error al actualizar noticias:', error);
@@ -120,7 +110,6 @@ async function refreshNews() {
 
 // Efectos visuales adicionales
 function initializeVisualEffects() {
-    // Efecto de paralaje suave en el scroll
     window.addEventListener('scroll', () => {
         const scrolled = window.pageYOffset;
         const parallax = document.querySelector('.background-grid');
@@ -131,7 +120,6 @@ function initializeVisualEffects() {
         }
     });
     
-    // Efecto de hover en las tarjetas
     document.addEventListener('mouseover', (e) => {
         if (e.target.closest('.news-card')) {
             const card = e.target.closest('.news-card');
@@ -169,33 +157,20 @@ function handleResponsive() {
 // FunciÃ³n de inicializaciÃ³n
 function init() {
     console.log('Inicializando BladeRunner Tech News...');
-    
-    // Cargar noticias iniciales
     loadNews();
-    
-    // Actualizar hora de Ãºltima actualizaciÃ³n
     updateLastUpdateTime();
-    
-    // Inicializar efectos visuales
     initializeVisualEffects();
-    
-    // Manejar responsividad
     handleResponsive();
     
-    // Configurar actualizaciÃ³n automÃ¡tica cada hora (para pruebas)
-    // En producciÃ³n, esto se manejarÃ¡ desde el servidor
     setInterval(() => {
         console.log('Verificando actualizaciones...');
-        // refreshNews(); // Descomentado para evitar actualizaciones constantes en desarrollo
-    }, 3600000); // 1 hora
+    }, 3600000);
     
     console.log('BladeRunner Tech News inicializado correctamente');
 }
 
-// Inicializar cuando el DOM estÃ© listo
 document.addEventListener('DOMContentLoaded', init);
 
-// FunciÃ³n para exportar datos (Ãºtil para el sistema de actualizaciÃ³n)
 window.BladeRunnerNews = {
     refreshNews,
     updateLastUpdateTime,
